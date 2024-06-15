@@ -65,16 +65,7 @@ export const vistaPanel = {
     </div>
   `,
   script: () => {
-    function resolveTicket(codi) {
-      const incident = incidents.find(incident => incident.codi === codi);
-      if (incident) {
-        incident.estat = 'resolt';
-        incident.data_resolt = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
-        renderTables();
-      }
-    }
-
-    function renderTables() {
+   function renderTables() {
       const ticketsPendientes = document.getElementById('ticketsPendientes');
       const ticketsResueltos = document.getElementById('ticketsResueltos');
 
