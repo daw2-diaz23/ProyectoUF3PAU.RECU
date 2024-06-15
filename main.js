@@ -1,10 +1,10 @@
-import { header } from './src/componentes/header.js';
+import { header } from "./src/componentes/header";
 
-document.querySelector('header').innerHTML = header.template;
-header.script();
+import { vistaPanel } from "./src/vistas/panel";
+import { vistaRegistro } from "./src/vistas/registro";
 
-document.addEventListener('DOMContentLoaded', function() {
-  if (document.getElementById('panel-button')) {
-    document.getElementById('panel-button').click();
-  }
-});
+document.querySelector('header').innerHTML = header.template
+document.querySelector('main').innerHTML = vistaRegistro.template
+header.script()
+vistaPanel.script()
+
